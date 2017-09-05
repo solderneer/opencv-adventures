@@ -12,3 +12,5 @@ ret ,thresh1 = cv2.threshold(greyscale, 127, 255, cv2.THRESH_BINARY)
 cv2.imshow('binary', thresh1)
 cv2.waitKey()
 cv2.destroyAllWindows()
+
+# Adaptive thresholding is also a thing
