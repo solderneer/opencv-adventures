@@ -15,6 +15,7 @@ gray_template = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
 cv2.imshow('Waldo', gray_template)
 cv2.waitKey()
 gray_template_normal = scale(gray_template, axis=0, with_mean=True, with_std=True, copy=True)
+gray_template_normal = np.rot90(gray_template_normal,2)
 
 dst = cv2.filter2D(gray_normal,-1,gray_template_normal)
 i,j = np.unravel_index(dst.argmax(), dst.shape)
